@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import "./AccountDetailsForm.css";
 const AccountDetailsForm = () => {
   const [options, setOptions] = useState([]); // For customer options
   const [selectedOption, setSelectedOption] = useState(""); // For selected customer
