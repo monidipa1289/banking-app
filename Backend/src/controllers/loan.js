@@ -14,7 +14,7 @@ const loanInfo = async (req, res) => {
 
 const addLoan = async (req, res) => {
   const { Cust_id, Loan_number, Loan_type, Balance } = req.body;
-  console.log(Cust_id);
+  console.log(Cust_id, Loan_number, Loan_type, Balance );
   if (
     !Cust_id ||
     Loan_number === undefined ||

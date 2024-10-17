@@ -45,18 +45,18 @@ const LoanDetailsForm = () => {
     // Prepare data to be submitted
     const dataToSubmit = {
       Cust_id: selectedOption,
-      loan_number: formData.loanNumber,
-      loan_type: formData.loanType,
-      loan_amount: formData.loanAmount,
+      Loan_number: formData.loanNumber,
+      Loan_type: formData.loanType,
+      Balance: formData.loanAmount,
     };
-
+    console.log(dataToSubmit);
     try {
       const response = await axios.post(
         "http://localhost:8000/api/v1/addLoan",
         dataToSubmit
       ); // Replace with your actual POST API endpoint
       console.log("Form submission success:", response.data);
-      alert("Account details submitted successfully!");
+      alert("Loan details submitted successfully!");
     } catch (error) {
       console.error("Error while submitting form data:", error);
       alert("Failed to submit account details.");
